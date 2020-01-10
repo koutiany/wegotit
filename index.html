@@ -175,17 +175,17 @@
 
 		<!-- Custom Map Script -->
 		<script>
-			var northwest = L.latLng(15.25, -22.65),
-				southeast = L.latLng(-15.25, 22.65),
-//				bounds = L.latLngBounds(northwest, southeast),
+			var northwest = L.latLng(5.0, -7.5),
+				southeast = L.latLng(-11.0, 16.0),
+				bounds = L.latLngBounds(northwest, southeast),
 //				keyUrl = 'img/key.png',		
 //				keyLocation = [[1.56261, -17.979], [4.12572, -13.28022]],
 				memap = L.map('memap', {
 					attributionControl: false
-				}).setView([6.19856, -8.50791], 7);
+				}).setMaxBounds(bounds).setView([-5.0, 0.3], 7);
 			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-//				minZoom: 5,
-//				maxZoom: 9,
+				minZoom: 6,
+				maxZoom: 10,
 				id: 'jandrel.8881niet',
 				accessToken: 'pk.eyJ1IjoiamFuZHJlbCIsImEiOiJjazM3amk5cHQwMDNrM25yejJkeHRkZHI4In0.SPT0_-93CZ1AcRkVB06hSQ'
 			}).addTo(memap);
