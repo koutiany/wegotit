@@ -200,18 +200,7 @@
 
 			//add line points
 
-			var	pointA = new L.LatLng(6.90219, -12.27448),
-				pointB = new L.LatLng(7.20203, -10.12249),
-				pointC = new L.LatLng(7.1775, -9.46472),
-                pointD = new L.LatLng(7.38426, -8.08594),
-                pointE = new L.LatLng(7.68922, -6.21826),
-				pointF = new L.LatLng(7.67833, -5.52612),
-                pointG = new L.LatLng(7.60211, -5.19653),
-                pointH = new L.LatLng(7.39515, -4.87793),
-				pointI = new L.LatLng(7.86447, -4.9021),
-                pointJ = new L.LatLng(7.15322, -6.97522),
-				pointK = new L.LatLng(6.90219, -12.27448),
-				point1 = new L.LatLng(6.90219, -12.20448),
+			var	point1 = new L.LatLng(6.90219, -12.20448),
 				point2 = new L.LatLng(6.62156, -11.70044),
 				point3 = new L.LatLng(7.20203, -10.05249),
 				point4 = new L.LatLng(7.1775, -9.39472),
@@ -223,28 +212,22 @@
 				point10 = new L.LatLng(3.94591, -4.66479),
 				point11 = new L.LatLng(3.71188, -6.49512),
 				point12 = new L.LatLng(6.90219, -12.13448),
-				point13 = new L.LatLng(6.52849, -13.24402);
+				point13 = new L.LatLng(6.52849, -13.24402),
+				point14 = new L.Latlng(1.11, 1.11),
+			    	point15 = new L.Latlng(2.22, 2.22);
 
 			//add PointLine arrays
-			var	numericalPointList = [point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13],
-				alphaPointList = [pointA, pointB, pointC, pointD, pointE, pointF, pointG, pointH, pointI, pointJ, pointK];
+			var	numericalPointList = [point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13];
 
 			//create PolyLines
-			var	alphaPolyline = new L.Polyline(alphaPointList, {
-					color: '#ff2727',
-					weight: 3,
-					opacity: 1,
-					smoothFactor: 1
-				}),
-				numericalPolyline = new L.Polyline(numericalPointList, {
-					color: '#bd1c1c',
+			var	numericalPolyline = new L.Polyline(numericalPointList, {
+					color: '#400d0d',
 					weight: 3,
 					opacity: 1,
 					smoothFactor: 1
 				});
 
 			//add PolyLines
-			alphaPolyline.addTo(memap);
 			numericalPolyline.addTo(memap);
 
 
